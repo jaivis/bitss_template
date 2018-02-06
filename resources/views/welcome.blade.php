@@ -98,7 +98,7 @@
                                 <div class="panel-body">
                                     <form action="" method="POST">
                                         <div class="form-group">
-                                            <input type="text" class="form-control input-lg" id="reg" placeholder="43603072379">
+                                            <input type="tel" class="form-control input-lg" id="reg" placeholder="43603072379">
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control input-lg" id="nos" placeholder="BITSS, SIA">
