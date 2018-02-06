@@ -79,6 +79,7 @@
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Rezerves kopiju veidošana <span class="label label-default">bez maksas</span></li>
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Augstāku pozīciju meklētājprogrammā <span class="label label-success"><a href="https://www.google.lv" target="_blank">Google</a></span></li>
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Mārketinga rīki <span class="label label-default">uzstādīsim bez maksas</span></li>
+                            <li><span class="glyphicon glyphicon-chevron-down"></span> Reklāma Facebook <span class="label label-default">iegūsti jaunus klientus</span></li>
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Google Analytics <span class="label label-default">seko līdzi mājaslapas statistikai</span></li>
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Google Tag Manager <span class="label label-default">mārketinga otimizācija</span></li>
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Drošības sertifikāts <span class="label label-default">vienmēr pasargāts</span></li>
