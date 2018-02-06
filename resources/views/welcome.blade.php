@@ -29,7 +29,7 @@
                 </div>
 
                 {{--hashtags--}}
-                <div class="row" style="margin: 25px 0px 40px 0px;">
+                <div class="row" style="margin-top: 25px;">
                     <div class="col-xs-12">
                         <ul class="list-inline text-center">
                             @foreach(config('app.keywords') as $keyword)
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>--}}
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-sm-6" style="margin-top: 40px;">
                         <h2 class="text-uppercase text-center" style="margin: 28px 0px;"><small>tava uzņēmuma</small> <b>#ieguvums</b></h2>
                         <ul class="list-unstyled">
                             <li><span class="glyphicon glyphicon-chevron-down"></span> Visu izdarīsim mēs <span class="label label-default">nedomā par to</span></li>
@@ -90,7 +90,7 @@
 
                     {{--form--}}
                     <section>
-                        <div class="col-xs-12 col-sm-6">
+                        <div class="col-xs-12 col-sm-6" style="margin-top: 40px;">
                             <div class="panel panel-success">
                                 <div class="panel-heading">
                                     <h2 class="text-uppercase text-center"><b>#piesakies</b> <small>bezmaksas mājaslapai</small></h2>
@@ -109,7 +109,7 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control input-lg" id="ema" placeholder="info@bitss.lv" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                                         </div>
-                                        <button type="submit" class="btn btn-success btn-lg col-xs-12">Pieteikties</button>
+                                        <button type="submit" disabled class="btn btn-success btn-lg col-xs-12">Pieteikties</button>
                                     </form>
                                 </div>
                             </div>
