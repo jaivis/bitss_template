@@ -228,4 +228,15 @@ return [
 
     ],
 
+    'keywords' => [
+        'uzņēmumam',
+        'bezmaksas',
+        'mājaslapa',
+        'uzstādīšana',
+        'seo',
+        'mārektings',
+        'optimizācija',
+    ],
+
+
 ];

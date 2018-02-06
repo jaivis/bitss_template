@@ -11,8 +11,11 @@ $panel-inner-border: $laravel-border-color;
 
 // Brands
 $brand-primary: #3097D1;
-$brand-info: #8eb4cb;
-$brand-success: #2ab27b;
+$brand-info: #23A6D5;
+//$brand-info: #8eb4cb;
+$brand-success: #23D5AB;
+//$brand-success: #2ab27b;
+//$brand-success: #E73C7E;
 $brand-warning: #cbb956;
 $brand-danger: #bf5329;
 
@@ -27,12 +30,15 @@ $text-color: #FFFFFF;
 $navbar-default-bg: #fff;
 
 // Buttons
-$btn-default-color: $text-color;
+//$btn-default-color: $text-color;
+$btn-success-color:              $text-color;
+//$btn-success-bg:                 $brand-success;
+//$btn-success-border:             darken($btn-success-bg, 5%);
 
 // Inputs
 $input-border: lighten($text-color, 40%);
 $input-border-focus: lighten($brand-primary, 25%);
-$input-color-placeholder: lighten($text-color, 30%);
+$input-color-placeholder: #CCCCCC;
 
 // Panels
 $panel-default-heading-bg: #fff;
@@ -50,4 +56,12 @@ $input-bg:                       #FFFFFF;
 //** Text color for `<input>`s
 //$input-color:                    $gray !default;
 //** `<input>` border color
-$input-border:                   #E73C7E;
+$input-border:                   $brand-success;
+//$input-border:                   #E73C7E;
+
+// Panels
+$panel-success-heading-bg: $brand-success;
+$panel-success-border: $brand-success;
+
+$panel-info-heading-bg: $brand-info;
+$panel-info-border: $brand-info;

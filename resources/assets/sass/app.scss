@@ -52,7 +52,7 @@ body {
   }
 }
 
-h1 {
+h1, h2 {
   color: #FFFFFF;
 
   small {
@@ -96,5 +96,19 @@ a:hover{
     fill: #E92C69;
   }
 
+}
+
+footer{
+  margin-top: 100px;
+}
+
+.glyphicon-chevron-down{
+  color: $brand-success;
+}
+
+li{
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-size: 13px;
 }
 
