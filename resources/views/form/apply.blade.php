@@ -40,7 +40,7 @@
                     <h4 class="modal-title">Veiksmīgi saņemts!</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Tuvākajā laikā Jūs uz savu e-pastu saņemsiet mūsu izveidotu piedāvājumu!</p>
+                    <p>Tuvākajā laikā Jūs uz savu e-pastu saņemsiet mūsu izveidotu piedāvājumu (kas vis ticamāk jau ir noticis)!</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Aizvērt</button>
