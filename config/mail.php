@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@studija.it'),
-        'name' => env('MAIL_FROM_NAME', 'BITSS :: Pakalpojumi Tavam uzņēmumam'),
+        'address' => env('MAIL_FROM_ADDRESS', 'bitss@studija.it'),
+        'name' => env('MAIL_FROM_NAME', 'BITSS : Pakalpojumi Tavam uzņēmumam'),
     ],
 
     /*

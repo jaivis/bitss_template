@@ -8,6 +8,8 @@
     <meta name="keywords" content="{{implode(',', config('app.keywords'))}}">
     <meta name="description" content="{{implode(' ', config('app.keywords'))}}">
     <title>@lang('global.title')</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -134,28 +136,7 @@
                             </h2>
                         </div>
                         <div class="panel-body">
-                            <form action="" method="POST">
-                                <div class="form-group">
-                                    <input type="tel" class="form-control input-lg" id="reg" placeholder="43603072379">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control input-lg" id="nos" placeholder="BITSS, SIA">
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control input-lg" id="tel" placeholder="29907070"
-                                           pattern="[0-9]{8}" title="8 ciparu telefona numurs">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control input-lg" id="ema"
-                                           placeholder="info@bitss.lv"
-                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control input-lg" rows="5" placeholder="PAPILDUS PIEZĪMES VAI JAUTĀJUMI"></textarea>
-                                </div>
-                                <button type="submit" disabled class="btn btn-success btn-lg col-xs-12">Pieteikties
-                                </button>
-                            </form>
+                            @include('form.apply')
                         </div>
                     </div>
                     {{--<h2 class="text-uppercase text-center">piesakies <small>bezmaksas mājaslapai</small></h2>

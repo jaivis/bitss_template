@@ -8,15 +8,27 @@ use Mail;
 class MailController extends Controller
 {
     //
-    public function send_email()
+    public function send_email(Request $request)
     {
-        $data = array('name' => "Virat Gandhi");
+        //  data to view
+        $data = [
+            'name' => "{$request->responsible_person}",
+            'form' => $request->all()
+        ];
 
-        Mail::send(['text' => 'mail'], $data, function ($message) {
-            $message->to('aivis.jansauskis@live.com', 'Klient name')
-                ->subject('Laravel Basic Testing Mail')
-                ->from('info@bitss.lv', 'info@bitss.lv epasts');
+        //  send email to studija.it
+        Mail::send('emails.studijas', $data, function ($message) use ($request) {
+            $message->to(config('mail.from.address'), config('mail.from.name'))
+                ->from("{$request->email}", "{$request->responsible_person} ({$request->legal_name} - {$request->legal_nr})")
+                ->subject("ONLINE: {$request->legal_name} ({$request->legal_nr})");
         });
-        echo "Basic Email Sent. Check your inbox.";
+
+        //  send email to client
+        Mail::send('emails.klienta', $data, function ($message) use ($request) {
+            $message->to("{$request->email}", "{$request->responsible_person} ({$request->legal_name})")->subject("{$request->legal_name} ({$request->legal_nr})");
+        });
+
+        //  return json response
+        return response()->json(['status' => TRUE]);
     }
 }

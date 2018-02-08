@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send', "MailController@send_email");
+//  apply form - post data
+Route::post('/apply', "MailController@send_email");
