@@ -6,11 +6,11 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 html{
-  background: linear-gradient(-45deg, #23A6D5, #23D5AB, #EE7752, #E73C7E);
+  background-color: $body-bg;
 }
 //
 body {
-  background-color: transparent;
+  //background: linear-gradient(-45deg, #23A6D5, #23D5AB, #EE7752, #E73C7E);
   //width: 100 wh;
   //height: 90vh;
   //background-size: 400% 400%;
@@ -56,17 +56,26 @@ body {
 }
 
 h1, h2 {
-  color: #FFFFFF;
+  color: $text-color;
 
   small {
     font-size: 12px;
-    color: #FFFFFF;
+    color: $text-color;
   }
 
 }
 
 a{
   color: #FFFFFF;
+
+  &:hover{
+    color: #FFFFFF;
+  }
+
+}
+
+.a-color a{
+  color: $text-color;
 }
 
 a:hover{
@@ -113,5 +122,9 @@ li{
   font-weight: bold;
   letter-spacing: 1.1px;
   font-size: 13px;
+}
+
+textarea{
+  resize: none;
 }
 

@@ -236,6 +236,11 @@ return [
         'seo',
         'mārektings',
         'optimizācija',
+        'uzturēšana',
+        'izstrāde',
+        'dizains',
+        'logo',
+        'individuāli pakalpojumi'
     ],
 
 
