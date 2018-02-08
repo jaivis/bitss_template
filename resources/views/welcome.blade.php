@@ -32,7 +32,7 @@
         </div>
 
         {{--into text--}}
-        <div class="row">
+        <div class="row info-text">
             <div class="xol-xs-12 text-center text-uppercase">
                 <div style="padding: 0px 15px;">
                     <h3><b>Uzņēmuma īpašniek, atstāj visu mūsu ziņā!</b></h3>
