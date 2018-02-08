@@ -34,9 +34,11 @@
         {{--into text--}}
         <div class="row">
             <div class="xol-xs-12 text-center text-uppercase">
-                <h3><b>Uzņēmuma īpašniek, atstāj visu mūsu ziņā!</b></h3>
-                <h5>Lai izveidotu uzņēmuma mājaslapu rodas daudz lieku jautājumu un galvas sāpes - kā, ko, kur..
-                    Uztici to mums, mēs visu izdarīsim Tavā vietā</h5>
+                <p>
+                    <h3><b>Uzņēmuma īpašniek, atstāj visu mūsu ziņā!</b></h3>
+                    <h5>Lai izveidotu uzņēmuma mājaslapu rodas daudz lieku jautājumu un galvas sāpes - kā, ko, kur..
+                        Uztici to mums, mēs visu izdarīsim Tavā vietā</h5>
+                </p>
             </div>
         </div>
 
