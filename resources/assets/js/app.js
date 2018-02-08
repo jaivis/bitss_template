@@ -68,7 +68,14 @@ const apply_form = new Vue({
                 //  reset form
                 this.resetForm();
             }
-        }
+        },
+        'legal_nr': function(newVal, oldVal){
+            //
+            if(((newVal).toString()).length == 11){
+                // fetch data from url and get company name
+            }
+        },
+
     },
     computed: {
         validation: function () {
