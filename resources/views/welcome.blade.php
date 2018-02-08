@@ -24,7 +24,7 @@
         {{--brand / title--}}
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="display-4">
+                <h1>
                     <b>BITSS</b>
                     <small>@lang('global.moto')</small>
                 </h1>
@@ -34,11 +34,11 @@
         {{--into text--}}
         <div class="row">
             <div class="xol-xs-12 text-center text-uppercase">
-                <p>
+                <div style="padding: 0px 15px;">
                     <h3><b>Uzņēmuma īpašniek, atstāj visu mūsu ziņā!</b></h3>
                     <h5>Lai izveidotu uzņēmuma mājaslapu rodas daudz lieku jautājumu un galvas sāpes - kā, ko, kur..
                         Uztici to mums, mēs visu izdarīsim Tavā vietā</h5>
-                </p>
+                </div>
             </div>
         </div>
 
