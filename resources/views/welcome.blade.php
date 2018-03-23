@@ -2,12 +2,15 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
+    <!-- Title -->
+    <title>@lang('global.title')</title>
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="{{implode(',', config('app.keywords'))}}">
-    <meta name="description" content="{{implode(' ', config('app.keywords'))}}">
-    <title>@lang('global.title')</title>
+    <meta name="keywords" content="{{implode(',', __('global.keywords'))}}">
+    <meta name="description" content="{{implode(' ', __('global.keywords'))}}">
+    <meta name="robots" content="index, nofollow">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fonts -->
@@ -16,9 +19,25 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @if(env('APP_ENV') === 'production')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116309327-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-116309327-1');
+        </script>
+    @endif
+
 </head>
 
 <body>
+{{--https://vincentgarreau.com/particles.js/--}}
+<div id="particles-js"></div>
+
 <div class="container">
     <header>
         {{--brand / title--}}
@@ -35,21 +54,22 @@
         <div class="row info-text">
             <div class="xol-xs-12 text-center text-uppercase">
                 <div style="padding: 0px 15px;">
-                    <h3><b>Uzņēmuma īpašniek, atstāj visu mūsu ziņā!</b></h3>
-                    <h5>Lai izveidotu uzņēmuma mājaslapu rodas daudz lieku jautājumu un galvas sāpes - kā, ko, kur..
-                        Uztici to mums, mēs visu izdarīsim Tavā vietā</h5>
+                    <h3><b>{{ __('global.intro.heading') }}</b></h3>
+                    <h5>{{ __('global.intro.body') }}</h5>
                 </div>
             </div>
         </div>
 
         {{--hashtags--}}
-        <div class="row" style="margin-top: 25px;">
+        <div class="row" style="margin-top: 35px;">
             <div class="col-xs-12">
                 <ul class="list-inline text-center">
-                    @foreach(config('app.keywords') as $keyword)
+                    @foreach(__('global.keywords') as $keyword)
                         <li>
                             <h4>
-                                <span class="label label-default">#<a href="https://www.google.lv/search?q={{urlencode($keyword)}}" target="_blank">{{$keyword}}</a></span>
+                                <span class="label label-default">#<a
+                                            href="https://www.google.lv/search?q={{ "site:bitss.lv " . urlencode($keyword) }}"
+                                            target="_blank">{{$keyword}}</a></span>
                             </h4>
                         </li>
                     @endforeach
@@ -62,7 +82,7 @@
 
     <main>
 
-        <div class="row">
+        <div class="row" style="margin-top: 15px;">
             {{--ifnromācija--}}
             <section>
                 {{--<div class="col-xs-12 col-sm-6">
@@ -89,41 +109,17 @@
             </div>--}}
                 <div class="col-xs-12 col-sm-6 a-color" style="margin-top: 40px;">
                     <h2 class="text-uppercase text-center" style="margin: 28px 0px;">
-                        <small>tava uzņēmuma</small>
-                        <b>#ieguvums</b></h2>
+                        <small>{{ __('global.advantages.title1') }}</small>
+                        <b>{{ __('global.advantages.title2') }}</b>
+                    </h2>
                     <ul class="list-unstyled">
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Maksā tikai par uzturēšanu <span
-                                    class="label label-default">izdevīgi</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Visu izdarīsim mēs <span
-                                    class="label label-default">nedomā par to</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Nekādu lieku tēriņu uz mājas lapas
-                            izstrādi <span class="label label-default">ietaupi</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Mājaslapa un uzstādīšana <span
-                                    class="label label-default">bez maksas</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Responsīvs mājaslapas dizains <span
-                                    class="label label-default">tālruņiem un planšetdatoriem</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Mūsdienīgs un viens no ātrākajiem
-                            serveriem Latvijā <span class="label label-default">progresīvi</span></li>
-                        {{--<li><span class="glyphicon glyphicon-chevron-down"></span> Bezmaksas rezerves kopiju veidošana</li>--}}
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Rezerves kopiju veidošana <span
-                                    class="label label-default">bez maksas</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Augstāku pozīciju meklētājprogrammās (<a href="https://www.google.lv" target="_blank">Google</a> u.c)
-                            <span class="label label-default">Vairāk redzams</span>
-                        </li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Mārketinga rīki <span
-                                    class="label label-default">bez maksas</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Reklāma Facebook <span
-                                    class="label label-default">iegūsti jaunus klientus</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Google Analytics <span
-                                    class="label label-default">seko līdzi mājaslapas statistikai</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Google Tag Manager <span
-                                    class="label label-default">mārketinga otimizācija</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Drošības sertifikāts <span
-                                    class="label label-default">vienmēr pasargāts</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Paaugstinātu lapas ielādes ātrumu
-                            (2x) <span class="label label-default">zibenīgs</span></li>
-                        <li><span class="glyphicon glyphicon-chevron-down"></span> Jaunākās tehnoloģijas
-                            <span class="label label-default">nepaliec pagātnē</span></li>
+                        @foreach(__('global.advantages.items') as $advantages)
+                            <li>
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                <span>{{ $advantages['title'] }}</span>
+                                <span class="label label-default">{{ $advantages['tooltip'] }}</span>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </section>
@@ -133,8 +129,9 @@
                 <div class="col-xs-12 col-sm-6" style="margin-top: 40px;">
                     <div class="panel panel-success">
                         <div class="panel-heading">
-                            <h2 class="text-uppercase text-center"><b>#piesakies</b>
-                                <small>bezmaksas mājaslapai</small>
+                            <h2 class="text-uppercase text-center">
+                                <b style="color: white;">{{ __('global.form.title2') }}</b>
+                                <small>{{ __('global.form.title1') }}</small>
                             </h2>
                         </div>
                         <div class="panel-body">
@@ -281,13 +278,13 @@ c0.21-11.55-4.83-29.821-25.621-29.821c-18.9,0-26.881,17.01-28.351,29.821H1195.15
                 </a>
             </div>--}}
             <div class="col-xs-12 text-right">
-                <span>&copy; Copyright 2018, <b>BITSS</b></span>
+                <span>&copy; {{ date("Y") }}, <b>BITSS</b></span>
             </div>
         </div>
     </footer>
-
 </div>
-
+<!-- Scripts -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <!-- Scripts -->
 <script src="{{ mix('js/app.js') }}"></script>
 </body>

@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./particle');
 
 window.Vue = require('vue');
 
@@ -95,8 +96,29 @@ const apply_form = new Vue({
             });
         }
     },
+    beforeCreate: function(){
+        //
+    },
+    created: function(){
+        //
+    },
+    beforeMount: function(){
+        //
+    },
     mounted: function(){
         //
         console.log('BITSS :: apply form loaded');
+    },
+    beforeUpdate: function(){
+        //
+    },
+    updated: function(){
+        //
+    },
+    beforeDestroy: function(){
+        //
+    },
+    destroyed: function(){
+        //
     }
 });

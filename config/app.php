@@ -228,20 +228,4 @@ return [
 
     ],
 
-    'keywords' => [
-        'uzņēmumam',
-        'bezmaksas',
-        'mājaslapa',
-        'uzstādīšana',
-        'seo',
-        'mārektings',
-        'optimizācija',
-        'uzturēšana',
-        'izstrāde',
-        'dizains',
-        'logo',
-        'individuāli pakalpojumi'
-    ],
-
-
 ];
