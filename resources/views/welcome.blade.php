@@ -284,7 +284,7 @@ c0.21-11.55-4.83-29.821-25.621-29.821c-18.9,0-26.881,17.01-28.351,29.821H1195.15
     </footer>
 </div>
 <!-- Scripts -->
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <!-- Scripts -->
 <script src="{{ mix('js/app.js') }}"></script>
 </body>
